@@ -1,7 +1,7 @@
 numpy
 pandas
 streamlit
-pickle
+joblib
 scikit-learn
 string
-nltk==3.5
+nltk
