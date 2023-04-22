@@ -4,3 +4,5 @@ streamlit
 scikit-image
 joblib
 scikit-learn
+string
+nltk
