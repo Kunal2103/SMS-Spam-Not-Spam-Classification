@@ -1,6 +1,6 @@
 
 import streamlit as st
-import pickle
+import joblib
 import string
 from nltk.corpus import stopwords
 import nltk
@@ -23,8 +23,8 @@ def transform_text(text):
     for i in text:
         y.append(ps.stem(i))
     return " ".join(y)
-tfidf = pickle.load(open('https://github.com/Kunal2103/SMS-Spam-Not-Spam-Classification/tree/main/EmailClassifier/vectorizer.pkl','rb'))
-model = pickle.load(open('https://github.com/Kunal2103/SMS-Spam-Not-Spam-Classification/tree/main/EmailClassifier/model.pkl','rb'))
+tfidf = joblib.load(open('https://github.com/Kunal2103/SMS-Spam-Not-Spam-Classification/tree/main/EmailClassifier/vectorizer.pkl','rb'))
+model = joblib.load(open('https://github.com/Kunal2103/SMS-Spam-Not-Spam-Classification/tree/main/EmailClassifier/model.pkl','rb'))
 st.title("Email/SMS Spam Classifier")
 input_sms = st.text_area("Enter the message")
 if st.button('Predict'):
