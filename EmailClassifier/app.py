@@ -23,8 +23,8 @@ def transform_text(text):
     for i in text:
         y.append(ps.stem(i))
     return " ".join(y)
-tfidf = pickle.load(open('SMS-Spam-Not-Spam-Classification/main/EmailClassifier/vectorizer.pkl','rb'))
-model = pickle.load(open('SMS-Spam-Not-Spam-Classification/main/EmailClassifier/model.pkl','rb'))
+tfidf = pickle.load(open('Kunal2103/SMS-Spam-Not-Spam-Classification/main/EmailClassifier/vectorizer.pkl','rb'))
+model = pickle.load(open('Kunal2103/SMS-Spam-Not-Spam-Classification/main/EmailClassifier/model.pkl','rb'))
 st.title("Email/SMS Spam Classifier")
 input_sms = st.text_area("Enter the message")
 if st.button('Predict'):
