@@ -5,4 +5,4 @@ scikit-image
 joblib
 scikit-learn
 string
-nltk.download(...)
+nltk.download('punkt')
